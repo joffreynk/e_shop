@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Category < ApplicationRecord
   # before_action :authenticate_user!
   belongs_to :user, dependent: :destroy
@@ -5,5 +7,4 @@ class Category < ApplicationRecord
   has_many :products, through: :join_product_with_categories
 
   validates :name, :icon, presence: true, length: { minimum: 2 }
-
 end
