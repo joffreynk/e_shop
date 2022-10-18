@@ -1,0 +1,17 @@
+<div class = "container">
+<h1 class="">Add recipies</h1>
+<%= form_with url: "/categories/create", method: :post do |form| %>
+
+  <div class="mb-2">
+    <%= form.label :name, class:"text-success form-label" %>
+    <%= form.text_field :name, :class=>"form-control"  %>
+  </div>
+
+  <div class="mb-2">
+    <%= form.label :icon_link, class:"text-success form-label" %>
+    <%= form.text_field :icon_link, :class=>"form-control", :placeholder=>"https:images.org/img/254" %>
+  </div>
+</div>
+  <%= form.submit "Add", :class=>"btn btn-primary" %>
+<% end %>
+</div>
