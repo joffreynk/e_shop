@@ -1,0 +1,31 @@
+<%
+=begin%>
+ <% if @user_categories.length > 0 %>
+  <% @user_categories.each do |category| %>
+    <a href=<%= "categories/#{category.id}/products" %>>
+      <div class="card mb-3">
+        <div class="row g-0">
+          <div class="col-4">
+            <img src=<%= category.icon %> class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-6">
+            <div class="card-body">
+              <h5 class="card-title"><%= category.name %></h5>
+              <p class="card-text">Total expense: </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+  <% end %>
+<% else %>
+  <h3>You don't have any category, please add them
+<% end %> 
+<%
+=end%>
+
+<a href="categories/new">
+<button type="button" class="btn btn-success">Add category</button>
+</a>
+
+<div class="mb-5 pb-5">
