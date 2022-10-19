@@ -10,10 +10,11 @@ Rails.application.routes.draw do
     confirmations: 'users/confirmations'
   }
 
-  get "categories/create", to: "categories#new"
+  get "categories/new", to: "categories#new"
   post "categories/create", to: "categories#create"
 
-  root to: 'categories#index'
+  get "/", to: 'categories#index'
+  # root to: 'categories#index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
