@@ -1,19 +1,19 @@
 <div class = "container">
   <h1 class="">Add Product</h1>
-  <%= form_with url: "/products/create", method: :post do |f| %>
+  <%= form_with url: "/categories/#{@brand_id }/shoping_lists/create", method: :post do |f| %>
 
     <div class="mb-2">
       <%= f.label :name, class:"text-success form-label" %>
-      <%= f.text_field :name, :class=>"form-control", :placeholder=>"enter your product"  %>
+      <%= f.text_field :name, :class=>"form-control", :placeholder=>"enter your Item"  %>
     </div>
 
     <div class="mb-2">
       <%= f.label :amount, class:"text-success form-label" %>
       <%= f.number_field :amount, :class=>"form-control", :placeholder=>"enter the price you spent" %>
     </div>
-
-      <%= f.hidden_field :user_id, value: current_user.id %>
-      <%= f.submit "Add Brand", :class=>"btn btn-primary" %>
+    <%= f.hidden_field :brand_id, value: @brand_id %>
+    <%= f.hidden_field :user_id, value: current_user.id %>
+    <%= f.submit "Add Item", :class=>"btn btn-primary" %>
     </div>
   <% end %>
 </div>

@@ -1,31 +1,54 @@
-<%
-=begin%>
- <% if @user_categories.length > 0 %>
-  <% @user_categories.each do |category| %>
-    <a href=<%= "categories/#{category.id}/products" %>>
+
+ <% if @single_category %>
+<% if @single_category.shoping_lists.length %>
+  <%= @single_category.shoping_lists.sum(:amount) %>
+  
+  <% @single_category.shoping_lists.each do |category| %>
       <div class="card mb-3">
         <div class="row g-0">
           <div class="col-4">
-            <img src=<%= category.icon %> class="img-fluid rounded-start" alt="...">
+            <p class="card-text">Time: <%= category.created_at %></p>
           </div>
           <div class="col-6">
             <div class="card-body">
               <h5 class="card-title"><%= category.name %></h5>
-              <p class="card-text">Total expense: </p>
+              <p class="card-text">Total expense: <%= category.amount %></p>
+
             </div>
           </div>
+
         </div>
       </div>
-    </a>
   <% end %>
 <% else %>
   <h3>You don't have any category, please add them
 <% end %> 
-<%
-=end%>
+<% end %> 
+<% @single_category.shoping_lists.order('created_at DESC').limit(2).each do |h| %>
+  <div class="card-body">
+    <h5 class="card-title"><%= h.name %></h5>
+    <p class="card-text">Total expense: <%= h.amount %></p>
+    <p class="card-text">Time: <%= h.created_at %></p>
+  </div>
+<% end %>
 
-<a href="categories/new">
+
+ <div class="card mb-3">
+  <div class="row g-0">
+    <div class="col-4">
+      <img src=<%= @single_category.icon %> class="img-fluid rounded-start" alt="..."> 
+    </div>
+    <div class="col-6">
+      <div class="card-body">
+        <h5 class="card-title"><%= @single_category.name %></h5>
+        <p class="card-text">Total expense: </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+ <a href=<%= "/categories/#{@single_category.id}/shoping_lists/new" %>>
 <button type="button" class="btn btn-success">Add category</button>
-</a>
+</a> 
 
 <div class="mb-5 pb-5">

@@ -13,7 +13,10 @@ Rails.application.routes.draw do
   get "categories/new", to: "categories#new"
   post "categories/create", to: "categories#create"
   get "/", to: 'categories#index'
-  get "categories/:id/products", to: "products#index"
+  get "categories/:id/shopinglists", to: "shoping_lists#index"
+  get "/categories/:id/shoping_lists/new", to: "shoping_lists#new"
+  post "/categories/:id/shoping_lists/create", to: "shoping_lists#create"
+
   # root to: 'categories#index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
