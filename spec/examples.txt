@@ -1,22 +1,22 @@
-example_id                                                 | status  | run_time        |
----------------------------------------------------------- | ------- | --------------- |
-./spec/models/category_spec.rb[1:1]                        | passed  | 0.01619 seconds |
-./spec/models/category_spec.rb[1:2]                        | passed  | 0.0177 seconds  |
-./spec/models/category_spec.rb[1:3]                        | passed  | 0.02041 seconds |
-./spec/models/category_spec.rb[1:4]                        | passed  | 0.03456 seconds |
-./spec/models/join_category_with_shoping_list_spec.rb[1:1] | passed  | 0.033 seconds   |
-./spec/models/join_category_with_shoping_list_spec.rb[1:2] | passed  | 0.031 seconds   |
-./spec/models/join_category_with_shoping_list_spec.rb[1:3] | passed  | 0.03422 seconds |
-./spec/models/join_category_with_shoping_list_spec.rb[1:4] | passed  | 0.05654 seconds |
-./spec/models/join_category_with_shoping_list_spec.rb[1:5] | passed  | 0.03059 seconds |
-./spec/models/shoping_list_spec.rb[1:1]                    | passed  | 0.02176 seconds |
-./spec/models/shoping_list_spec.rb[1:2]                    | passed  | 0.14939 seconds |
-./spec/models/shoping_list_spec.rb[1:3]                    | passed  | 0.02005 seconds |
-./spec/models/shoping_list_spec.rb[1:4]                    | passed  | 0.01757 seconds |
-./spec/models/user_spec.rb[1:1:1]                          | passed  | 0.01127 seconds |
-./spec/models/user_spec.rb[1:1:2]                          | passed  | 0.01195 seconds |
-./spec/models/user_spec.rb[1:1:3]                          | passed  | 0.01438 seconds |
-./spec/models/user_spec.rb[1:1:4]                          | passed  | 0.015 seconds   |
-./spec/requests/categories_spec.rb[1:1:1]                  | pending | 0.00003 seconds |
-./spec/requests/products_spec.rb[1:1:1]                    | pending | 0.00003 seconds |
-./spec/requests/users_spec.rb[1:1:1]                       | pending | 0.00012 seconds |
+example_id                                                 | status | run_time        |
+---------------------------------------------------------- | ------ | --------------- |
+./spec/models/category_spec.rb[1:1]                        | passed | 0.02294 seconds |
+./spec/models/category_spec.rb[1:2]                        | passed | 0.02215 seconds |
+./spec/models/category_spec.rb[1:3]                        | passed | 0.02281 seconds |
+./spec/models/category_spec.rb[1:4]                        | passed | 0.02265 seconds |
+./spec/models/join_category_with_shoping_list_spec.rb[1:1] | passed | 0.06143 seconds |
+./spec/models/join_category_with_shoping_list_spec.rb[1:2] | passed | 0.03143 seconds |
+./spec/models/join_category_with_shoping_list_spec.rb[1:3] | passed | 0.05038 seconds |
+./spec/models/join_category_with_shoping_list_spec.rb[1:4] | passed | 0.02865 seconds |
+./spec/models/join_category_with_shoping_list_spec.rb[1:5] | passed | 0.08449 seconds |
+./spec/models/shoping_list_spec.rb[1:1]                    | passed | 0.01934 seconds |
+./spec/models/shoping_list_spec.rb[1:2]                    | passed | 0.10051 seconds |
+./spec/models/shoping_list_spec.rb[1:3]                    | passed | 0.02118 seconds |
+./spec/models/shoping_list_spec.rb[1:4]                    | passed | 0.01916 seconds |
+./spec/models/user_spec.rb[1:1:1]                          | passed | 0.01104 seconds |
+./spec/models/user_spec.rb[1:1:2]                          | passed | 0.01628 seconds |
+./spec/models/user_spec.rb[1:1:3]                          | passed | 0.01651 seconds |
+./spec/models/user_spec.rb[1:1:4]                          | passed | 0.01756 seconds |
+./spec/requests/categories_spec.rb[1:1:1]                  | passed | 0.44176 seconds |
+./spec/requests/categories_spec.rb[1:1:2]                  | passed | 0.06658 seconds |
+./spec/requests/categories_spec.rb[1:1:3]                  | passed | 0.04916 seconds |
