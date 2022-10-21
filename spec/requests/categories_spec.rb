@@ -15,7 +15,7 @@ RSpec.describe 'categories', type: :request do
     @category = Category.create(
       name: 'Smart phone',
       icon: 'https://images.unsplash.com/photo-1598128558393-70ff21433be0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=489&q=80',
-      user_id: @user.id,
+      user_id: @user.id
     )
   end
 
@@ -31,7 +31,7 @@ RSpec.describe 'categories', type: :request do
     end
 
     it "should render the correct content in the 'index' template" do
-      expect(response.body).to include( @category.name)
+      expect(response.body).to include(@category.name)
     end
   end
 end

@@ -12,26 +12,26 @@ RSpec.describe 'categories index page', type: :feature do
     sign_in @user
 
     Category.create(
-      name: "Smart phone 1",
+      name: 'Smart phone 1',
       icon: 'https://images.unsplash.com/photo-1598128558393-70ff21433be0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=489&q=80',
       user_id: @user.id
     )
     Category.create(
-      name: "Smart phone 2",
+      name: 'Smart phone 2',
       icon: 'https://images.unsplash.com/photo-1598128558393-70ff21433be0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=489&q=80',
       user_id: @user.id
     )
     Category.create(
-      name: "Smart phone 3",
+      name: 'Smart phone 3',
       icon: 'https://images.unsplash.com/photo-1598128558393-70ff21433be0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=489&q=80',
       user_id: @user.id
     )
     Category.create(
-      name: "Smart phone 4",
+      name: 'Smart phone 4',
       icon: 'https://images.unsplash.com/photo-1598128558393-70ff21433be0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=489&q=80',
       user_id: @user.id
     )
-    visit "/"
+    visit '/'
   end
 
   it 'should have 4 categories' do
