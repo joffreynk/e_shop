@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # Assuming you have not yet modified this file, each configuration option below
 # is set to its default value. Note that some are commented out while others
 # are not: uncommented lines are intended to protect your configuration from
@@ -245,7 +243,7 @@ Devise.setup do |config|
   # "users/sessions/new". It's turned off by default because it's slower if you
   # are using only default views.
   config.scoped_views = true
-  config.navigational_formats = ['*/*', :html, :turbo_stream] 
+  config.navigational_formats = ['*/*', :html, :turbo_stream]
 
   # Configure the default scope given to Warden. By default it's the first
   # devise role declared in your routes (usually :user).

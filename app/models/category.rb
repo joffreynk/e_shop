@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class Category < ApplicationRecord
   # before_action :authenticate_user!
   belongs_to :user, dependent: :destroy
