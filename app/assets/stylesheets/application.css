@@ -20,6 +20,9 @@ h5 {
   padding: 0;
 }
 
-a {
+a,
+a:visited,
+a:hover {
   text-decoration: none;
+  color: black;
 }
