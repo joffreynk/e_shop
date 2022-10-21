@@ -11,8 +11,8 @@ Rails.application.configure do
   # Turn false under Spring and add config.action_view.cache_template_loading = true.
   config.cache_classes = true
 
-  config.active_record.migration_error = false
-  config.active_record.maintain_test_schema = true
+  # config.active_record.migration_error = false
+  config.active_record.maintain_test_schema = false
 
   # Eager loading loads your whole application. When running a single test locally,
   # this probably isn't necessary. It's a good idea to do in a continuous integration
