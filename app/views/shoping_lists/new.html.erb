@@ -17,7 +17,7 @@
 
     <div class="mb-2">
       <%= f.label :amount, class:"text-success form-label" %>
-      <%= f.number_field :amount, :class=>"form-control", step: :any, :placeholder=>"enter the price you spent" %>
+      <%= f.number_field :amount, :class=>"form-control", step: :any, :placeholder=>"12.36" %>
     </div>
     <%= f.hidden_field :brand_id, value: @brand_id %>
     <%= f.hidden_field :user_id, value: current_user.id %>

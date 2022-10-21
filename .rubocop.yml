@@ -1,9 +1,12 @@
+inherit_from: .rubocop_todo.yml
+
 AllCops:
   NewCops: enable
   Exclude:
     - "Guardfile"
     - "Rakefile"
     - "node_modules/**/*"
+    - "db/schema.rb"
 
   DisplayCopNames: true
 
