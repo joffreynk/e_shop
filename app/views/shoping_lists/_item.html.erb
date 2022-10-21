@@ -1,0 +1,17 @@
+<div class="card mb-5">
+  <div class="d-flex p-2 bg-primary justify-content-between">
+      <a class="" href=<%= "/"%>>
+      <p class="fs-1 text-white"><span>&#10226;</span></p>
+      </a>
+  <a class="navbar-brand text-white fs-3" href=<%= "/categories/#{@single_category.id}/shopinglists" %>>Most recent</a>
+  <a class="navbar-brand  text-white fs-3" href=<%= "/categories/#{@single_category.id}/shopinglists/ancient" %>>Most Ancient</a>
+  </div>
+  <div class="row g-0 text-center">
+      <div class="card-body col-9 d-flex flex-column justify-content-start align-items-start">
+        <h5 class="card-title fs-2 fw-bold"><%=  @single_category.name %></h5>
+      </div>
+      <div class="col-3 text-end d-flex flex-column justify-content-center">
+      <p class="card-text px-3 fw-bold">$<%=  @single_category.shoping_lists.sum(:amount) %></p>
+    </div>
+  </div>
+</div>

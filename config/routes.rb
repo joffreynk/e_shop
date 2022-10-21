@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 Rails.application.routes.draw do
   devise_scope :user do
     get '/users/sign_out' => 'devise/sessions#destroy'
@@ -10,7 +8,14 @@ Rails.application.routes.draw do
     confirmations: 'users/confirmations'
   }
 
-  root to: 'categories#index'
+  get 'categories/new', to: 'categories#new'
+  post 'categories/create', to: 'categories#create'
+  get '/', to: 'categories#index'
+  get 'categories/:id/shopinglists', to: 'shoping_lists#index'
+  get 'categories/:id/shopinglists/ancient', to: 'shoping_lists#ancient'
+  get '/categories/:id/shopinglists/new', to: 'shoping_lists#new'
+  post '/categories/:id/shopinglists/create', to: 'shoping_lists#create'
+  # root to: 'categories#index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")

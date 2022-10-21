@@ -1,8 +1,6 @@
-# frozen_string_literal: true
-
-class CreateProducts < ActiveRecord::Migration[7.0]
+class CreateShopingLists < ActiveRecord::Migration[7.0]
   def change
-    create_table :products do |t|
+    create_table :shoping_lists do |t|
       t.string :name
       t.decimal :amount
       t.references :user, null: false, foreign_key: true
