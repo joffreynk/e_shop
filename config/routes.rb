@@ -15,7 +15,6 @@ Rails.application.routes.draw do
   get 'categories/:id/shopinglists/ancient', to: 'shoping_lists#ancient'
   get '/categories/:id/shopinglists/new', to: 'shoping_lists#new'
   post '/categories/:id/shopinglists/create', to: 'shoping_lists#create'
-
   # root to: 'categories#index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
