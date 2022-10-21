@@ -4,6 +4,10 @@ class ShopingListsController < ApplicationController
   def index
     @single_category = Category.find_by(id: params[:id])
   end
+
+  def ancient
+    @single_category = Category.find_by(id: params[:id])
+  end
   
   def new
     @brand_id = params[:id]

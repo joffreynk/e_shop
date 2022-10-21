@@ -1,4 +1,7 @@
 <div class = "container">
+  <a href=<%= "/categories/#{@brand_id }/shopinglists"%>>
+  <p class="fs-1"><span>&#10226;</span></p>
+  </a>
   <h1 class="">Add Product</h1>
   <%= form_with url: "/categories/#{@brand_id }/shoping_lists/create", method: :post do |f| %>
 
