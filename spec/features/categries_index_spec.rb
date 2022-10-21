@@ -34,7 +34,7 @@ RSpec.describe 'categories index page', type: :feature do
     visit "/"
   end
 
-  it 'should have 5 categories' do
+  it 'should have 4 categories' do
     expect(page).to have_content('Smart phone 1')
     expect(page).to have_content('Smart phone 2')
     expect(page).to have_content('Smart phone 3')
