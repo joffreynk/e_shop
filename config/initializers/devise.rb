@@ -245,7 +245,7 @@ Devise.setup do |config|
   # "users/sessions/new". It's turned off by default because it's slower if you
   # are using only default views.
   config.scoped_views = true
-
+  config.navigational_formats = ['*/*', :html, :turbo_stream] 
 
   # Configure the default scope given to Warden. By default it's the first
   # devise role declared in your routes (usually :user).

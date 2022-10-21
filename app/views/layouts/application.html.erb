@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>EShop</title>
+    <title>Shoping store</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,10 +11,33 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body class="container">
-   <a href="/users/sign_out">sign_out</a>
+  <body>
+  <nav class="navbar bg-light">
+    <div class="container-fluid">
+      <a href="/" class="navbar-brand">JN store</a>
+      <% if user_signed_in? %>
+      <div class="d-flex">
+        <a href="/users/sign_out">
+          <button class="btn btn-outline-success" >Sign out</button>
+        </a>
+      </div>
+      </div>
+      <% else %>
+        <div class="d-flex">
+          <a href="/users/sign_up" class="px-4 ">
+            <button class="btn btn-outline-success" >Sign up</button>
+          </a>
+          <a href="/users/sign_in" >
+            <button class="btn btn-outline-success" >Sign in</button>
+          </a>
+        </div>
+      <% end %>
+    </div>
+  </nav>
+  <div  class="container">
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
+  </div>
   </body>
 </html>

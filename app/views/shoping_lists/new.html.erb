@@ -7,9 +7,14 @@
       <%= f.text_field :name, :class=>"form-control", :placeholder=>"enter your Item"  %>
     </div>
 
+     <div class="mb-2">
+      <%= f.label :icon_link, class:"text-success form-label" %>
+      <%= f.text_field :icon_link, :class=>"form-control", :placeholder=>"https:images.org/img/254" %>
+    </div>
+
     <div class="mb-2">
       <%= f.label :amount, class:"text-success form-label" %>
-      <%= f.number_field :amount, :class=>"form-control", :placeholder=>"enter the price you spent" %>
+      <%= f.number_field :amount, :class=>"form-control", step: :any, :placeholder=>"enter the price you spent" %>
     </div>
     <%= f.hidden_field :brand_id, value: @brand_id %>
     <%= f.hidden_field :user_id, value: current_user.id %>

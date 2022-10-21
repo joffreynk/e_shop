@@ -5,18 +5,17 @@
   
   <% @single_category.shoping_lists.each do |category| %>
       <div class="card mb-3">
-        <div class="row g-0">
-          <div class="col-4">
-            <p class="card-text">Time: <%= category.created_at %></p>
+        <div class="row g-0 text-center">
+          <div class="col-3 ">
+            <img src=<%= category.icon %> class="img-fluid rounded-start" alt="...">
           </div>
-          <div class="col-6">
-            <div class="card-body">
+            <div class="card-body col-5 d-flex flex-column">
               <h5 class="card-title"><%= category.name %></h5>
-              <p class="card-text">Total expense: <%= category.amount %></p>
-
+              <p class="card-text pt-3"><%= category.created_at.strftime("%d, %B %Y   %l:%M %p") %></p>
             </div>
+            <div class="col-3 d-flex flex-column align-items-center justify-content-center">
+            <p class="card-text align-self-center">$<%= category.amount %></p>
           </div>
-
         </div>
       </div>
   <% end %>
