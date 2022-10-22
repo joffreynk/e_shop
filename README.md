@@ -34,6 +34,10 @@ To get a local copy up and running follow these simple example steps.
     1. rails server
     2. xdg-open http://localhost:3000/
 
+### check out demos:
+[ Live demo](https://www.loom.com/share/0e14d51194154c4e8b9e84259817a22d)
+[Live app](https://e-store-joffrey.herokuapp.com/)
+
 ### Done!
 
 Ready to work?⛏️ You're all set to explore and change the repo locally (on your computer).
