@@ -1,0 +1,22 @@
+<div class = "container">
+  <a href=<%= "/"%>>
+  <p class="fs-1"><span>&#10226;</span></p>
+  </a>
+  <h1 class="">Add Brand</h1>
+  <%= form_with url: "/categories/create", method: :post do |f| %>
+
+    <div class="mb-2">
+      <%= f.label :name, class:"text-success form-label" %>
+      <%= f.text_field :name, :class=>"form-control"  %>
+    </div>
+
+    <div class="mb-2">
+      <%= f.label :icon_link, class:"text-success form-label" %>
+      <%= f.text_field :icon_link, :class=>"form-control", :placeholder=>"https:images.org/img/254" %>
+    </div>
+
+      <%= f.hidden_field :user_id, value: current_user.id %>
+      <%= f.submit "Add Brand", :class=>"btn btn-primary" %>
+    </div>
+  <% end %>
+</div>

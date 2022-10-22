@@ -1,0 +1,28 @@
+<%= render "item" %>
+
+<% if @single_category.shoping_lists.length %>
+  <% @single_category.shoping_lists.order('created_at DESC').limit(5).each do |item| %>
+      <div class="card mb-3">
+        <div class="row g-0 text-center">
+          <div class="col-3 ">
+            <img src=<%= item.icon %> class="img-fluid rounded-start" alt="...">
+          </div>
+            <div class="card-body col-5 d-flex flex-column justify-content-between align-items-center">
+              <h5 class="card-title"><%= item.name %></h5>
+              <p class="card-text pt-3"><%= item.created_at.strftime("%d %b %Y   %l:%M %p") %></p>
+            </div>
+            <div class="col-3 d-flex flex-column align-items-center justify-content-center">
+            <p class="card-text align-self-center">$<%= item.amount %></p>
+          </div>
+        </div>
+      </div>
+  <% end %>
+<% else %>
+  <h3>You don't have any category, please add them
+<% end %> 
+
+ <a href=<%= "/categories/#{@single_category.id}/shopinglists/new" %>>
+<button type="button" class="btn btn-success">Add</button>
+</a> 
+
+<div class="mb-5 pb-5">
