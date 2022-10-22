@@ -36,6 +36,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### check out demos:
 [ Live demo](https://www.loom.com/share/0e14d51194154c4e8b9e84259817a22d)
+
 [Live app](https://e-store-joffrey.herokuapp.com/)
 
 ### Done!
